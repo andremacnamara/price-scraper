@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r esm index.js --ignore db.json"
+    "dev": "nodemon -r esm index.mjs --ignore db.json"
   },
   "author": "",
   "license": "ISC",
