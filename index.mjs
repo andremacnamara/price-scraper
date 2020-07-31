@@ -3,6 +3,7 @@ import express from 'express';
 import { listOfItems, returnItemData } from './lib/scraper.mjs'
 import { wait } from './lib/utils.mjs'
 import './lib/cron.mjs'
+import * as items from './db.json';
 
 const items = require('./db.json')
 
