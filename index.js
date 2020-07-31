@@ -1,18 +1,20 @@
-import { getHTML, getItemPrice, listOfItems } from './lib/scraper'
+import express from 'express';
 
-const wait = (amount = 0) => new Promise(resolve => setTimeout(resolve, amount));
+import { listOfItems, returnItemData } from './lib/scraper'
+import { wait } from './lib/utils'
+import './lib/cron'
+const items = require('./db.json')
 
-async function go(url, priceSelector) {
-    const pricePromise = getHTML(url);
-    const [ priceHTML ] = await Promise.all([pricePromise]);
+const app = express();
 
-    const price = await getItemPrice(priceHTML, priceSelector);
-    console.log(`The price is ${price}`);
-    await wait(3000);
-}
+app.get('/scrape', async (req, res, next) => {
+    res.json({'status': 'Add in a live count'})
+})
 
-listOfItems.forEach(item => {
-    go(item.url, item.priceSelector);
+app.get('/', ( req, res, next ) => {
+    res.json({items})
+})
+
+const server = app.listen(2300, () => {
+    console.log(`Scraper is running on port: ${server.address().port}`);
 });
-
-// go();
