@@ -7,7 +7,7 @@ const items = require('./db.json')
 const app = express();
 
 app.get('/scrape', async (req, res, next) => {
-    res.json({'status': 'Add in a live count'})
+    res.render(items);
 })
 
 app.get('/', ( req, res, next ) => {
