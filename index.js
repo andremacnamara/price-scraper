@@ -1,7 +1,7 @@
 const express = require('express')
-import { listOfItems, returnItemData } from './lib/scraper'
-import { wait } from './lib/utils'
-import './lib/cron'
+const { listOfItems, returnItemData } = require('./lib/scraper');
+const { wait } = require('./lib/utils');
+require('./lib/cron');
 const items = require('./db.json')
 
 const app = express();
