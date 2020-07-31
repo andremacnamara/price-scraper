@@ -1,5 +1,4 @@
-import express from 'express';
-
+const express = require('express')
 import { listOfItems, returnItemData } from './lib/scraper'
 import { wait } from './lib/utils'
 import './lib/cron'
