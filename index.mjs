@@ -11,7 +11,7 @@ app.get('/scrape', async (req, res, next) => {
 })
 
 app.get('/', ( req, res, next ) => {
-    res.json({'items'})
+    res.json({'status': 'Add in a live count'})
 })
 
 // app.get('/items', ( req, res, next ) => {
