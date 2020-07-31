@@ -1,4 +1,4 @@
-import express from 'express.js';
+import express from 'express';
 
 import { listOfItems, returnItemData } from './lib/scraper.js'
 import { wait } from './lib/utils.js'
