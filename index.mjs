@@ -5,8 +5,6 @@ import { wait } from './lib/utils.mjs'
 import './lib/cron.mjs'
 import * as items from './db.json';
 
-const items = require('./db.json')
-
 const app = express();
 
 app.get('/scrape', async (req, res, next) => {
