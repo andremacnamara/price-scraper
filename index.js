@@ -1,8 +1,8 @@
 import express from 'express';
 
-import { listOfItems, returnItemData } from './lib/scraper'
-import { wait } from './lib/utils'
-import './lib/cron'
+import { listOfItems, returnItemData } from './lib/scraper.js'
+import { wait } from './lib/utils.js'
+import './lib/cron.js'
 const items = require('./db.json')
 
 const app = express();
