@@ -1,5 +1,5 @@
-import { getData } from '../lib/scraper.js'
-import express from 'express';
+const getData = require('../lib/scraper.js');
+const express = require('express');
 const router = express.Router();
 
 router.get('/', async ( req, res, next ) => {

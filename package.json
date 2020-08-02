@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "dev": "nodemon -r esm index.js --ignore db.json"
+    "start": "nodemon --exec babel-node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +17,14 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "forever": "^3.0.0",
     "lowdb": "^1.0.0",
     "mongoose": "^5.9.27",
-    "node-cron": "^2.0.3",
+    "node-cron": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/node": "^7.10.5",
     "nodemon": "^2.0.4"
   }
 }

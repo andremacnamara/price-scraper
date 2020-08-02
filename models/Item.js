@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const itemSchema = new mongoose.Schema({

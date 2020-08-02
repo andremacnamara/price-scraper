@@ -3,7 +3,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
 const routes = require('./routes/index');
-import './lib/cron.js'
+require('./lib/cron.js');
 
 const app = express();
 
