@@ -1,0 +1,13 @@
+block content
+  h2 Hi Andre
+  p Here is your daily price updates on the following items
+  br
+
+  each item in items
+    h2 #{item.title}
+    img(src=item.image)
+    p Standard Price:&nbsp;
+        strong €#{item.standardPrice}
+    p Current Price:&nbsp;
+        strong €#{item.salePrice}
+
